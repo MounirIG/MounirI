@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "../../tests"
+		},
+		{
+			"path": "../../Linux"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../C_avance"
+		}
+	],
+	"settings": {}
+}
