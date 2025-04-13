@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="MounirI">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/output.css" rel="stylesheet">
+    <title>Fangels - Expérience</title>
+  </head>
+
+  <body>
+    <div class="navbar shadow-sm text-white" style="position:fixed; background-color: #161515;">
+        <div class="flex-1">
+          
+          <a class="btn btn-ghost text-xl" style="font-family: 'Blackside'; font-size:50px" href="#" onclick="window.location.href='index.html'">Fangels</a> <!--"Logo" du site qui permet de rafraîchir la page-->
+        </div>
+        <div class="flex-none">
+          <ul class="menu menu-horizontal px-1">
+            <button class="btn" onclick="my_modal_1.showModal()">Calculatrice</button> <!--Bouton qui permet d'ouvrir la calculatrice dans un modal-->
+            <dialog id="my_modal_1" class="modal"> <!--Config du modal calculatrice avec le texte affiché et les boutons de la calculatrice-->
+              <div class="modal-box">
+                <p class="py-4">Appuyez sur ESC ou le bouton Fermer pour fermer l'onglet.</p>
+                <p class="py-4" style="font-family: 'Blackside'; font-size:60px">Calculatrice</p>
+                <div class="chat chat-start">
+                  <div class="chat-bubble chat-bubble-info" style="width:232px">
+                    <div class="calculator" id="calculator">
+                      <input type="text" id="display" class="kbd kbd-xl" style="width:205px;background-color:rgb(247, 247, 247);border-color:rgb(237, 234, 234)"> <!--Affichage du résultat et point d'entrée du clavier-->
+                      <div class="buttons" id="buttons">
+                        <button onclick="add('7')" class="btn btn-secondary">7</button>
+                        <button onclick="add('8')" class="btn btn-secondary">8</button>
+                        <button onclick="add('9')" class="btn btn-secondary">9</button>
+                        <button onclick="add('+')" class="btn btn-primary">+</button>
+                        <br>
+                        <button onclick="add('4')" class="btn btn-secondary">4</button>
+                        <button onclick="add('5')" class="btn btn-secondary">5</button>
+                        <button onclick="add('6')" class="btn btn-secondary">6</button>
+                        <button onclick="add('-')" class="btn btn-primary">-</button>
+                        <br>
+                        <button onclick="add('1')" class="btn btn-secondary">1</button>
+                        <button onclick="add('2')" class="btn btn-secondary">2</button>
+                        <button onclick="add('3')" class="btn btn-secondary">3</button>
+                        <button onclick="add('*')" class="btn btn-primary">*</button>
+                        <br>
+                        <button onclick="add('.')" class="btn btn-secondary">.</button>
+                        <button onclick="add('0')" class="btn btn-secondary">0</button>
+                        <button onclick="resultat()" class="btn btn-primary2">=</button>
+                        <br>
+                        <button onclick="del()" class="btn btn-primary2">DEL</button>
+                        <button onclick="clearDisplay()" class="btn btn-primary2">CLEAR</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-action">
+                  <form method="dialog">
+                    <button class="btn">Fermer</button> <!--Bouton permettant de fermer le modal-->
+                  </form>
+                </div>
+              </div>
+            </dialog>          
+            <button class="btn" onclick="window.location.href='questionnaire.html'" style="margin-left:10px">Contact</button> <!--Bouton qui permet d'ouvrir le questionnaire-->
+          </ul>
+        </div>
+      </div>
+      <br><br><br><br>
+
+
+
+      
+      <div class="text-center"> <!--Carousel des hauts avec images emmenant vers les liens pour acheter-->
+        <h2 style="font-weight:bold;font-family: 'Courier New'; font-size:25px; margin-bottom:-150px">Notre sélection de hauts</h2>
+     </div>
+      
+      <div class="carousel rounded-box" style="margin:200px">
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/favela-unisex-t-shirt-imprime-white-f8622o00j-a11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/31f9ba1e3ba64f2e9f3f3b3575ee8df0/18fb51611b1d4c35a39df6ecc251b8dd.jpg?imwidth=300"
+              alt="Favela tee" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/yourturn-rome-tee-unisex-t-shirt-imprime-black-yo121010c-q11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/83de6481f372495f9b630938548bf34b/08118908e58b4a0da085e870dddd4421.jpg?imwidth=300"
+              alt="Rome Your Turn tee" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/quiksilver-quik-liquid-unisex-t-shirt-imprime-black-qu121001p-q11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/20e575f312f046118735614835199e5a/c867a9af7e404fa9b3de94cf2e3db91d.jpg?imwidth=300"
+              alt="Quiksilver tee" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/adidas-originals-fashion-arty-t-shirt-imprime-cream-white-ad122o142-a11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/3aa7abe18a6d47d3a258987db74acb98/5aa8b01cd6464c39811181c2fe17ed37.jpg?imwidth=300"
+              alt="Adidas Basquiat tee" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/pullandbear-washed-t-shirt-imprime-grey-puc22o231-c11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/d7d8051613074182888a989e8b6d330e/098ef84d382141f6880ff83e832f0a65.jpg?imwidth=300"
+              alt="Washed tee" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/mister-tee-t-shirt-imprime-white-m0m22o0nh-a11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/1e43c1238f0641d08348acf4bda5c127/169640934c824e0890e85c82473503de.jpg?imwidth=300"
+              alt="Looney Tunes tee" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/project-x-paris-t-shirt-imprime-noir-prk22o096-q11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/ff2c6a08449d4086bfa11e9320b30164/7d2f452a85a8491fbd37db4d29072d11.jpg?imwidth=300"
+              alt="Project Paris heart tee" />
+          </a>
+        </div>
+      </div>
+
+
+
+      
+      <div class="text-center"> <!--Carousel des bas avec images emmenant vers les liens pour acheter-->
+        <h2 style="font-weight:bold;font-family: 'Courier New'; font-size:25px; margin-bottom:-150px">Notre sélection de bas</h2>
+      </div>
+      
+      <div class="carousel rounded-box" style="margin:200px">
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/karl-kani-jean-boyfriend-grey-kk122g04f-c11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/5ebed6f552ba468397205626f74667c1/870efb3635c041a9844c9121f7ab3ceb.jpg?imwidth=300"
+              alt="Karl Kani jean grey" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/pegador-risley-pantalon-cargo-cream-pep22e01x-b11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/fa2eda17dee04094be47a37e24d2ddba/4767578b6e6d4a92a3745704872305a8.jpg?imwidth=300"
+              alt="Pegador white cargo" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/pegador-troy-pants-pantalon-de-survetement-pearl-grey-pep2100iz-c11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/59a5e13e91f54e93aee8bbf42a8b0cbb/58d561c17c8c4f51a4f39169f3cad8ba.jpg?imwidth=300"
+              alt="Troy Chino pants" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/adidas-originals-adibreak-pantalon-de-survetement-mineral-green-ad122e0jj-m12.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/67a80245edce47298a0d879ddb0d7a70/40230dcba47241c5a515ed177d20acd3.jpg?imwidth=300"
+              alt="Adidas green sweatpants" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/bershka-skater-pantalon-de-survetement-grey-bej22e0g9-c11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/79e52d5acdde4d89a26dd886c78ab704/7c72751a78954ec4822ecb2133b2d0ab.jpg?imwidth=300"
+              alt="Grey Skater pants" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/karl-kani-signature-straight-leg-pantalon-de-survetement-black-kk122e04d-q11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/e8d26bd46d064f94ac8efc05ad5d44e2/98a110fbf2e44e16a4fe8456e86f758b.jpg?imwidth=300"
+              alt="Karl Kani Full black chino" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/urban-classics-pantalon-de-survetement-grey-ur622j002-112.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/8ba413dfda4d49b4925f27291820c885/90f1b79c59414dbbbc27e78c14bd6f81.jpg?imwidth=300"
+              alt="Urban classics grey sweatpants" />
+          </a>
+        </div>
+      </div>
+
+      <div class="text-center"> <!--Carousel des chaussures avec images emmenant vers les liens pour acheter-->
+        <h2 style="font-weight:bold;font-family: 'Courier New'; font-size:25px; margin-bottom:-150px">Notre sélection de souliers</h2>
+     </div>
+      
+      <div class="carousel rounded-box" style="margin:200px">
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/nike-sportswear-air-force-1-07-baskets-basses-white-ni112n022-a11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/7ea1adc8e2413519aa0f1b107cd9036b/b0fc9185c02745619913ab6ae2cc6a20.jpg?imwidth=300"
+              alt="Nike AF1 White" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/new-balance-u740-unisex-baskets-basses-black-ne215p022-q11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/8d5f85e731184b3bbf91603e57ac4d62/451053fe840848ba8ddbb8f11db29d60.jpg?imwidth=300"
+              alt="NB U740 Black" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.birkenstock.com/fr/boston-soft-footbed-suede-leather/boston-suede-suedeleather-softfootbed-eva-u_46.html" target="_blank">
+            <img
+              src="https://www.birkenstock.com/dw/image/v2/BBBF_PRD/on/demandware.static/-/Sites-master-catalog/default/dwfa387f43/560771/560771_sole.jpg?sw=848&sh=848&strip=false"
+              style="width: 433px;"
+              alt="Birkenstock boston" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/adidas-originals-campus-00s-unisex-baskets-basses-grey-threefootwear-whiteoff-white-ad115o1j7-c11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/8b6d6ba13ca44997800222b6c6765c28/24e55aab49cf4896b4422d673900a419.jpg?imwidth=300"
+              alt="Adidas campus grey" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/asics-sportstyle-gel-1130-unisex-baskets-basses-creambirch-a0h15o09d-b11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/46d98e5dd22747cbb9bb3499ec8899e3/4e6da4a9e99b4880987a2f718f72f4ac.jpg?imwidth=300"
+              alt="Asics Gel1130 beige" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/massimo-dutti-mocassins-khaki-m3i12c097-n11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/28381387a80c4ff5bb6ad160ee325b64/6a960468fb514c9dbd3c810114717c0f.jpg?imwidth=300"
+              alt="Massimo Duti mocassins kaki" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/adidas-originals-samba-og-unisex-baskets-basses-cblackftwwhtgum5-ad115o03m-q11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/ecdbef15b6aa4484b3c63fbc8fb22949/af29fe5825d148bcbf53414318395cd1.jpg?imwidth=300&filter=packshot"
+              alt="Adidas Samba Black and white" />
+          </a>
+        </div>
+      </div>
+
+
+
+
+      
+      <div class="text-center"> <!--Carousel des chapeaux avec images emmenant vers les liens pour acheter-->
+        <h2 style="font-weight:bold;font-family: 'Courier New'; font-size:25px; margin-bottom:-150px">Notre sélection de chapeaux</h2>
+      </div>
+      
+      <div class="carousel rounded-box" style="margin:200px">
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/yourturn-unisex-casquette-black-yo154b006-q11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/77fe344c929d4f76acb382305c4e6eb6/f35a1f903df84429b9d8e4f577ff04dc.jpg?imwidth=300&filter=packshot"
+              alt="Your Turn casquette black" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/new-era-balaclava-unisex-bonnet-new-era-black-ne354p0bs-q11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/7dc472c8716f4a3f85963084c81edbf2/d342c61859db46248b613145be6a9a68.jpg?imwidth=300&filter=packshot"
+              alt="New Era balaclava" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/recap-oval-beanie-unisex-bonnet-black-rbe54p001-q11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/ec11f8fd28624c22bfbca05d6984c376/c69a8ad88c644c74ac79dbbb75ea4220.jpg?imwidth=300&filter=packshot"
+              alt="ReCap beanie black" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/47-athletics-thin-47-clean-up-unisex-casquette-sandstone-47b54b02l-b11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/c5b381d10c6448e3bf43840ad0e5ab98/8fa4b2e8596f4d2fb65557aacea42196.jpg?imwidth=300&filter=packshot"
+              alt="'47 White green casquette" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/tommy-jeans-linear-logo-bucket-hat-unisex-chapeau-denim-tob54r01l-k11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/d58271e696764a7a801b84e5e641a80a/2b48e42b268e4d88930035e29ef051d1.jpg?imwidth=300&filter=packshot"
+              alt="Tommy Jeans denim bucket hat" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/project-x-paris-chapeau-blanc-casse-prk54b00j-k11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/8b893c043e324253ac59f63c9f5f67a1/4fe4c7e03dc34356a94d9ccae3fa09ef.jpg?imwidth=300"
+              alt="Project Paris bucket hat beige" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/kangol-multi-trapper-bonnet-multi-k3954p003-t11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/7ca5618e643c3dc1b687c12d3433e30b/65350e61880d493aa7b9b460b913b7a3.jpg?imwidth=300"
+              alt="Kangol Chapka beige" />
+          </a>
+        </div>
+      </div>
+
+
+
+      <div class="text-center"> <!--Carousel des montres avec images emmenant vers les liens pour acheter-->
+        <h2 style="font-weight:bold;font-family: 'Courier New'; font-size:25px; margin-bottom:-150px">Notre sélection de montres</h2>
+      </div>
+      
+      <div class="carousel rounded-box" style="margin:200px">
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/guess-empire-montre-silver-coloured-gu152m0hp-d11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/c62544d6e04f4db7a8babfdcb9c01135/c851dd97e8b440f690871738276031e5.jpg?imwidth=300&filter=packshot"
+              alt="Guess empire" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/casio-montre-white-c1552m07f-d11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/2ad868c6ea614f769c7a5de08c885e6f/f7543ab0dd9d43e89880f28225ecf9d7.jpg?imwidth=300&filter=packshot"
+              alt="Casio square white" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/versace-v-pop-special-wc-efa-montre-white-vef52m06f-a11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/b902de39165540f9adc1f04bf692ace5/1078270931d84d85b98ca726adefa94b.jpg?imwidth=300&filter=packshot"
+              alt="Versace white" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/casio-montre-silver-colouredgreen-c1554m038-d11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/b59bf712a0fe41da856350545d675189/987baf0e45b240c0bcb5b476cc687d1f.jpg?imwidth=300&filter=packshot"
+              alt="Casio green" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/ferragamo-va-vega-upper-east-montre-a-aiguilles-silver-and-acqua-3sf52m02z-d11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/5c33764fd0804d00ad8104803af2004e/e5053573f1c74882b8290d2150916d17.jpg?imwidth=300&filter=packshot"
+              alt="Ferragamo vega" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/chpo-vintage-world-montre-gold-colouredbrown-cw954e007-f11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/eea888cf51cd3d3f8df158f6dd1de2d4/ea39fb2085b040d09d80229254402abd.jpg?imwidth=300&filter=packshot"
+              alt="CHPO world vintage" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.zalando.fr/pier-one-montre-black-pi952m031-q11.html" target="_blank">
+            <img
+              src="https://img01.ztat.net/article/spp-media-p1/390300fa735a480aa3c5a94d1f0948c0/93b28687146944759e6d1b9cf6e27c83.jpg?imwidth=300&filter=packshot"
+              alt="Pier one black">
+          </a>
+        </div>
+      </div>
+
+
+      <div class="text-center">
+        <h2 style="font-weight:bold;font-family: 'Courier New'; font-size:25px; margin-bottom:150px">Pour davantage de questions/recommandations, veuillez nous contacter.</h2>
+      </div>
+
+      <div style="display: flex; justify-content: center; align-items: center; height:50vh;"> <!-- Bouton emmenant vers la page de contact (questionnaire) -->
+        <button class="btn btn-secondary2" onclick="window.location.href='questionnaire.html';" style="font-family:'Courier New', monospace; font-size:20px">Questionnaire</button>
+      </div>
+      <script src="./js/calculatrice.js"></script>
+  </body>

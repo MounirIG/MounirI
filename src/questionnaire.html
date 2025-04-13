@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="MounirI">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/output.css" rel="stylesheet">
+    <title>Fangels - Questionnaire</title>
+  </head>
+
+  <body>
+    <div class="navbar shadow-sm text-white" style="position:fixed; background-color: #161515;">
+        <div class="flex-1">
+          
+          <a class="btn btn-ghost text-xl" style="font-family: 'Blackside'; font-size:50px" href="#" onclick="window.location.href='index.html'">Fangels</a> <!--"Logo" du site qui permet de rafraîchir la page-->
+        </div>
+        <div class="flex-none">
+          <ul class="menu menu-horizontal px-1">
+            <button class="btn" onclick="my_modal_1.showModal()">Calculatrice</button> <!--Bouton qui permet d'ouvrir la calculatrice dans un modal-->
+            <dialog id="my_modal_1" class="modal"> <!--Config du modal calculatrice avec le texte affiché et les boutons de la calculatrice-->
+              <div class="modal-box">
+                <p class="py-4">Appuyez sur ESC ou le bouton Fermer pour fermer l'onglet.</p>
+                <p class="py-4" style="font-family: 'Blackside'; font-size:60px">Calculatrice</p>
+                <div class="chat chat-start">
+                  <div class="chat-bubble chat-bubble-info" style="width:232px">
+                    <div class="calculator" id="calculator">
+                      <input type="text" id="display" class="kbd kbd-xl" style="width:205px;background-color:rgb(247, 247, 247);border-color:rgb(237, 234, 234)"> <!--Affichage du résultat et point d'entrée du clavier-->
+                      <div class="buttons" id="buttons">
+                        <button onclick="add('7')" class="btn btn-secondary">7</button>
+                        <button onclick="add('8')" class="btn btn-secondary">8</button>
+                        <button onclick="add('9')" class="btn btn-secondary">9</button>
+                        <button onclick="add('+')" class="btn btn-primary">+</button>
+                        <br>
+                        <button onclick="add('4')" class="btn btn-secondary">4</button>
+                        <button onclick="add('5')" class="btn btn-secondary">5</button>
+                        <button onclick="add('6')" class="btn btn-secondary">6</button>
+                        <button onclick="add('-')" class="btn btn-primary">-</button>
+                        <br>
+                        <button onclick="add('1')" class="btn btn-secondary">1</button>
+                        <button onclick="add('2')" class="btn btn-secondary">2</button>
+                        <button onclick="add('3')" class="btn btn-secondary">3</button>
+                        <button onclick="add('*')" class="btn btn-primary">*</button>
+                        <br>
+                        <button onclick="add('.')" class="btn btn-secondary">.</button>
+                        <button onclick="add('0')" class="btn btn-secondary">0</button>
+                        <button onclick="resultat()" class="btn btn-primary2">=</button>
+                        <br>
+                        <button onclick="del()" class="btn btn-primary2">DEL</button>
+                        <button onclick="clearDisplay()" class="btn btn-primary2">CLEAR</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-action">
+                  <form method="dialog">
+                    <button class="btn">Fermer</button> <!--Bouton permettant de fermer le modal-->
+                  </form>
+                </div>
+              </div>
+            </dialog>          
+            <button class="btn" onclick="window.location.href='questionnaire.html'" style="margin-left:10px">Contact</button> <!--Bouton qui permet d'ouvrir la calculatrice dans un modal-->
+        </ul>
+        </div>
+      </div>
+      <br><br><br><br>
+
+
+
+
+      <div class="flex flex-col isolate bg-white h-screen w-screen items-center" id="contact">
+        <h1 style="font-weight:bold;font-family: 'Courier New'; font-size:25px">Me contacter</h1>
+        <h2 style="font-weight:bold;font-family: 'Courier New'; font-size:20px;">Répondez à cette série de questions pour pouvoir contacter le créateur du site.</h2>
+        <div id="divquest" class="flex flex-col bg-white p-6 rounded-lg shadow-lg max-w-md w-full mt-12">
+          <div id="question" style="margin-top:100px; margin-bottom: 50px;" class="text-xl font-bold mb-4 text-center text-gray-700">De quelle couleur est le survêtement Adibreak ?</div>
+          <div id="reponses" class="flex flex-col space-y-2">
+            <button class="btn btn-accent">Vert</button>
+            <button class="btn btn-primary">Bleu</button>
+            <button class="btn btn-primary">Beige</button>
+            <button class="btn btn-primary">Noir</button>
+          </div>
+          <button id="bruteforce-btn" class="btn btn-warning" style="margin:30px;" onclick="bruteforce(this)"><del>BRUTEFORCE</del></button>
+          <span id="spinner" class="loading loading-spinner text-neutral hidden loading-xl mb-4"></span>
+          <div id="result" class="text-lg text-red-700 text-center"></div>
+          <div id="countdown" class="text-lg text-green-600 text-center mt-4"></div>
+
+        
+        </div>
+        
+        
+        
+      </div> 
+
+
+
+
+
+
+
+      <script src="./js/calculatrice.js"></script>
+      <script src="./js/questionnaire.js"></script>
+  </body>
